@@ -5,6 +5,36 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* justify-content:space-between; */
+  
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  /* align-items: center; */
+  /* move padding property here instead of ul */
+}
+
+.content {
+  flex: 1;
+  /* add flex */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color:#eee;
+  /* position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%; */
 }
 
 img {
@@ -16,6 +46,11 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 10px 15px;
+}
+
+button:hover {
+  background: #ddd;
 }
 
 input {
@@ -24,4 +59,23 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  /* set margin and padding to zero so it would follow .header, .footer instead */
+}
+
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover {
+  text-decoration: underline;
 }
